@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Noor-ul-Huda — Portfolio</title>
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- AOS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <style>
+    /* small extra styles */
+    .nav-backdrop {
+      backdrop-filter: blur(6px);
+      background: rgba(255, 255, 255, 0.6);
+    }
+
+    /* simple focus outline for accessible keyboard nav */
+    .focus-ring:focus {
+      outline: 3px solid rgba(59, 130, 246, 0.35);
+      outline-offset: 2px;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+  <!-- NAVBAR -->
+  <header class="fixed w-full top-0 z-50">
+    <div class="nav-backdrop shadow">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+          <!-- Left: Brand (logo-like) -->
+          <a href="#home" class="flex items-center gap-3">
+            <!-- Simple square logo for site -->
+            <div
+              class="w-10 h-10 bg-blue-600 from-blue-500 to-indigo-600 rounded-lg flex items-center justify-center shadow text-white font-bold">
+              NH
+            </div>
+            <span class="sr-only">Noor-ul-Huda</span>
+          </a>
+
+          <!-- Desktop nav -->
+          <nav class="hidden md:flex space-x-8 items-center text-lg">
+            <a href="#home" class="hover:text-blue-600">Home</a>
+            <a href="#about" class="hover:text-blue-600">About</a>
+            <a href="#skills" class="hover:text-blue-600">Skills</a>
+            <a href="#projects" class="hover:text-blue-600">Projects</a>
+            <a href="#contact" class="hover:text-blue-600">Contact</a>
+          </nav>
+
+          <!-- Mobile: hamburger -->
+          <div class="md:hidden">
+            <button id="hambtn" aria-label="Open menu" class="p-2 rounded-md focus-ring">
+              <svg id="hamicon" xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 8h16M4 16h16" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile panel -->
+      <div id="mobmenu" class="md:hidden hidden">
+        <div class="px-4 pb-6 space-y-1">
+          <a href="#home" class="block px-3 py-2 rounded hover:bg-gray-100">Home</a>
+          <a href="#about" class="block px-3 py-2 rounded hover:bg-gray-100">About</a>
+          <a href="#skills" class="block px-3 py-2 rounded hover:bg-gray-100">Skills</a>
+          <a href="#projects" class="block px-3 py-2 rounded hover:bg-gray-100">Projects</a>
+          <a href="#contact" class="block px-3 py-2 rounded hover:bg-gray-100">Contact</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="pt-20">
+
+    <!-- HERO -->
+    <section id="home" class="min-h-[60vh] flex items-center">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center gap-10">
+        <div class="flex-1" data-aos="fade-right">
+          <h1 class="text-4xl md:text-5xl font-extrabold">Hi — I'm <span class="text-blue-600">Noor-ul-Huda</span></h1>
+          <p class="mt-4 text-lg text-gray-700 max-w-xl">
+            A frontend-focused web developer building clean, responsive interfaces using HTML, TailwindCSS & JavaScript.
+          </p>
+
+          <div class="mt-6 flex gap-3">
+            <a href="#projects"
+              class="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg shadow hover:bg-blue-700">View
+              Projects</a>
+            <a href="#contact"
+              class="inline-flex items-center px-5 py-3 border border-gray-200 rounded-lg hover:bg-gray-100">Contact
+              Me</a>
+          </div>
+        </div>
+
+        <!-- Hero visual / card -->
+        <div class="flex-1" data-aos="fade-left">
+          <div class="rounded-2xl p-6 bg-gradient-to-br from-white to-gray-50 shadow-lg border">
+            <h3 class="font-semibold mb-3">Quick Info</h3>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li><strong>Role:</strong> Frontend Developer</li>
+              <li><strong>Focus:</strong> Responsive UI, Tailwind, JavaScript</li>
+            </ul>
+            <div class="mt-4 grid grid-cols-3 gap-3">
+              <!-- small tech badges -->
+              <div class="p-3 rounded-lg bg-white border text-center">
+                <img src="./images/HTML.png" class="w-9" alt="">
+                <span class="sr-only">HTML5</span>
+              </div>
+              <div class="p-3 rounded-lg bg-white border text-center">
+                <img src="./images/css.png" class="w-[70px] text-center" alt="">
+
+                <span class="sr-only">CSS3</span>
+              </div>
+              <div class="p-3 rounded-lg bg-white border text-center">
+                <img src="./images/js.png" class="w-[70px]" alt="">
+
+                <span class="sr-only">JavaScript</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+        <div class="bg-white rounded-2xl shadow p-8 md:p-12">
+          <h2 class="text-2xl font-bold mb-4">About Me</h2>
+          <p class="text-gray-700 leading-relaxed">
+            My name is <strong>Noor-ul-Huda</strong>. I build accessible, responsive frontends and enjoy turning ideas
+            into polished web experiences. I like clean design, good performance and readable code.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS (2x2 grid boxes) -->
+    <section id="skills" class="py-16 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-10">Skills</h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Row 1 Col 1: Frontend -->
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <h3 class="font-semibold mb-4">Frontend</h3>
+            <div class="grid grid-cols-4 gap-4">
+              <!-- Logos only  -->
+              <!-- HTML -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+                <img src="./images/HTML.png" class="w-10" alt="">
+                <span class="sr-only">HTML</span>
+              </div>
+
+              <!-- CSS -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+                <img src="./images/css.png" class="w-[90px]" alt="">
+                <span class="sr-only">CSS</span>
+              </div>
+
+              <!-- JS -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+                <img src="./images/js.png" class="w-[90px]" alt="">
+                <span class="sr-only">JavaScript</span>
+              </div>
+
+              <!-- Bootstrap -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+                <img src="./images/boot.png" class="w-[50px]" alt="">
+                <span class="sr-only">Bootstrap</span>
+              </div>
+
+              <!-- Tailwind -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+                <img src="./images/tail.png" class="w-[50px]" alt="">
+                <span class="sr-only">Tailwind CSS</span>
+              </div>
+
+              <!-- React -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+                <img src="./images/react.png" class="w-[70px]" alt="">
+                <span class="sr-only">React</span>
+              </div>
+
+              <!-- Next.js -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+                
+                <img src="./images/next.png" class="w-[70px]" alt="">
+                <span class="sr-only">Next.js</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 1 Col 2: Backend -->
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <h3 class="font-semibold mb-4">Backend</h3>
+            <div class="grid grid-cols-4 gap-4">
+              <!-- Node.js -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+               <img src="./images/node.png"  class="w-[50px]" alt="">
+                <span class="sr-only">Node.js</span>
+              </div>
+
+              <!-- Express -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+               <img src="./images/ex.png" class="w-[60px]" alt="">
+                <span class="sr-only">Express.js</span>
+              </div>
+
+              <!-- MongoDB -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+               <img src="./images/mongo.png"  class="w-[60px]" alt="">
+                <span class="sr-only">MongoDB</span>
+              </div>
+
+              <!-- Firebase -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+                <img src="./images/fire.png"  class="w-[60px]" alt="">
+                <span class="sr-only">Firebase</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Row 2 Col 1: Design -->
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <h3 class="font-semibold mb-4">Design</h3>
+            <div class="grid grid-cols-4 gap-4">
+              <!-- Figma only as requested -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border col-span-2">
+                <img src="./images/figma.png"  class="w-[90px]" alt="">
+                <span class="sr-only">Figma</span>
+              </div>
+              <!-- placeholders to keep grid balanced -->
+              <div class="col-span-2"></div>
+            </div>
+          </div>
+
+          <!-- Row 2 Col 2: Others -->
+          <div class="bg-white rounded-2xl p-6 shadow-lg">
+            <h3 class="font-semibold mb-4">Others</h3>
+            <div class="grid grid-cols-4 gap-4 items-center">
+              <!-- Git -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+               <img src="./images/git.png" alt="">
+                <span class="sr-only">Git</span>
+              </div>
+
+              <!-- GitHub -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border">
+                  <img src="./images/GitHub.png" alt="">
+                <span class="sr-only">GitHub</span>
+              </div>
+
+              <!-- GitHub Desktop -->
+              <div class="flex items-center justify-center p-3 bg-gray-50 rounded-lg border col-span-2">
+                <img src="./images/git desktop.png" class="w-[50px]" alt="">
+                <span class="sr-only">GitHub Desktop</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="py-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+        <h2 class="text-2xl md:text-3xl font-bold text-center mb-8">Projects</h2>
+
+        <div class="grid gap-6 md:grid-cols-3">
+          <!-- Project card 1 -->
+          <article class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+            <div
+              class="h-36 rounded-lg bg-gradient-to-br from-indigo-500 to-pink-500 flex items-center justify-center text-white font-semibold">
+              Portfolio Site</div>
+            <h3 class="mt-4 font-semibold">Personal Portfolio</h3>
+            <p class="mt-2 text-sm text-gray-600">A responsive portfolio built with TailwindCSS, focusing on
+              accessibility and performance.</p>
+            <div class="mt-4 flex gap-2">
+              <span class="text-xs bg-gray-100 px-2 py-1 rounded">Tailwind</span>
+              <span class="text-xs bg-gray-100 px-2 py-1 rounded">JavaScript</span>
+            </div>
+          </article>
+
+          <!-- Project card 2 -->
+          <article class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+            <div
+              class="h-36 rounded-lg bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center text-white font-semibold">
+              Weather App</div>
+            <h3 class="mt-4 font-semibold">Weather App</h3>
+            <p class="mt-2 text-sm text-gray-600">Fetches weather via API, responsive cards and icons.</p>
+            <div class="mt-4 flex gap-2">
+              <span class="text-xs bg-gray-100 px-2 py-1 rounded">API</span>
+              <span class="text-xs bg-gray-100 px-2 py-1 rounded">JS</span>
+            </div>
+          </article>
+
+          <!-- Project card 3 -->
+          <article class="bg-white rounded-2xl p-6 shadow-lg hover:shadow-xl transition">
+            <div
+              class="h-36 rounded-lg bg-gradient-to-br from-green-400 to-teal-500 flex items-center justify-center text-white font-semibold">
+              Todo App</div>
+            <h3 class="mt-4 font-semibold">Todo App</h3>
+            <p class="mt-2 text-sm text-gray-600">LocalStorage-driven task app with filters and dark mode.</p>
+            <div class="mt-4 flex gap-2">
+              <span class="text-xs bg-gray-100 px-2 py-1 rounded">LocalStorage</span>
+              <span class="text-xs bg-gray-100 px-2 py-1 rounded">Vanilla JS</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="py-16 bg-gray-50">
+      <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8" data-aos="fade-up">
+        <h2 class="text-2xl font-bold text-center mb-6">Contact</h2>
+
+        <form id="contactForm" class="bg-white p-6 rounded-2xl shadow space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <input id="name" type="text" placeholder="Your name"
+              class="border rounded p-3 focus:ring-2 focus:ring-blue-200" />
+            <input id="email" type="email" placeholder="Your email"
+              class="border rounded p-3 focus:ring-2 focus:ring-blue-200" />
+          </div>
+
+          <textarea id="message" placeholder="Your message"
+            class="w-full border rounded p-3 h-32 focus:ring-2 focus:ring-blue-200"></textarea>
+
+          <div>
+            <button type="submit"
+              class="inline-flex items-center justify-center px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700">Send
+              Message</button>
+          </div>
+
+          <p id="formMsg" class="text-sm text-red-600"></p>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-white border-t mt-12">
+    <div
+      class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <div class="flex items-center gap-3">
+        <div
+          class="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white font-bold">
+          NH</div>
+        <div>
+          <p class="font-semibold">Noor-ul-Huda</p>
+          <p class="text-sm text-gray-600">Frontend Developer</p>
+        </div>
+      </div>
+
+      <div class="text-sm text-gray-600">&copy; <span id="year"></span> Noor-ul-Huda. All rights reserved.</div>
+
+      <div class="flex items-center gap-3">
+        <a href="#" class="text-gray-600 hover:text-gray-900">GitHub</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">LinkedIn</a>
+        <a href="#" class="text-gray-600 hover:text-gray-900">Email</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // AOS init
+    AOS.init({ once: true });
+
+    // Mobile menu toggle
+    const hambtn = document.getElementById('hambtn');
+    const mobmenu = document.getElementById('mobmenu');
+    const hamicon = document.getElementById('hamicon');
+    let open = false;
+    hambtn.addEventListener('click', () => {
+      open = !open;
+      mobmenu.classList.toggle('hidden', !open);
+      // toggle icon between hamburger and X
+      hamicon.innerHTML = open
+        ? '<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d=\"M6 18L18 6M6 6l12 12\" />'
+        : '<path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 8h16M4 16h16\" />';
+    });
+
+    // Close mobile menu when link clicked
+    mobmenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      open = false;
+      mobmenu.classList.add('hidden');
+      hamicon.innerHTML = '<path stroke-linecap=\"round\" stroke-linejoin=\"round\" stroke-width=\"2\" d=\"M4 8h16M4 16h16\" />';
+    }));
+
+    // Footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Form validation
+    document.getElementById('contactForm').addEventListener('submit', function (e) {
+      e.preventDefault();
+      const name = document.getElementById('name');
+      const email = document.getElementById('email');
+      const message = document.getElementById('message');
+      const formMsg = document.getElementById('formMsg');
+
+      formMsg.style.color = 'red';
+
+      if (!name.value.trim() || !email.value.trim() || !message.value.trim()) {
+        formMsg.textContent = 'Please fill out all fields.';
+        return;
+      }
+      // simple email check
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())) {
+        formMsg.textContent = 'Please enter a valid email.';
+        return;
+      }
+
+      formMsg.style.color = 'green';
+      formMsg.textContent = 'Message sent successfully! (demo)';
+      // clear fields
+      name.value = '';
+      email.value = '';
+      message.value = '';
+    });
+  </script>
+</body>
+
+</html>
